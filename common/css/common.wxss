@@ -1,14 +1,21 @@
 /* 颜色 */
+.color-white {
+	color: #fff;
+}
 .color-green {
 	color: #09bb07;
 }
 
 .color-black {
-	color: #353535;
+	/*color: #353535;*/
+	color: #666;
+	/*color: #888888;*/
 }
 
 .color-grey {
-	color: #888888;
+	/*color: #888888;*/
+	color: #999;
+	/*color: #b2b2b2;*/
 }
 
 .color-light-grey {
@@ -33,13 +40,26 @@
 	background: #e64340;
 }
 
+/* 字体 */
+.font-small {
+	font-size: 24rpx;
+}
+.font-medium {
+	font-size: 30rpx;
+}
+.font-large {
+	font-size: 36rpx;
+}
+
 /* 布局 */
 .flex {
 	display: flex;
+	flex-wrap: nowrap;
 }
 
 .wrapper-flex-center {
 	justify-content: center;
+	align-items: center;
 }
 
 .wrapper-flex-left {
@@ -57,9 +77,25 @@
 .wrapper-flex-between {
 	justify-content: space-between;
 }
+.align-center {
+	align-items: center;
+}
+
+.bottom {
+	/*box-sizing: border-box;*/
+	z-index: 3;
+	position: fixed;
+	-webkit-transform: translateZ(0);
+	bottom: 0;
+	width: 100%;
+	height: 30rpx;
+	padding: 10rpx;
+	line-height: 30rpx;
+}
 
 /* 按压 与 禁用 */
-.press {
+.button-hover {
+	/* .button-hover 是小程序按压按钮的默认样式类*/
 	opacity: 0.6;
 }
 
@@ -73,4 +109,17 @@
 
 .text-disable {
 	opacity: 10%;
+}
+
+/* 对齐 */
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
 }

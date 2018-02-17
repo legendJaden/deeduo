@@ -15,7 +15,7 @@ function initOpt(options, keyList) {
 			obj[key] = options[key];
 		}
 	}
-	console.log(obj);
+	// console.log(obj);
 	return obj;
 }
 
@@ -69,8 +69,8 @@ class Toast extends Pop {
 			}
 		}
 		this.opt = {
-			title: '',
-			image: '../../imgs/err.png',
+			title: '服务器罢工啦',
+			icon: 'none',
 			duration: 1000,
 		};
 		super.run('Toast', objectAssign({}, this.opt, options));
@@ -94,7 +94,11 @@ class Modal extends Pop {
 	constructor(options) {
 		super();
 		const opt = {
-			title: '提示',
+			title: '注意',
+			fail(err) {
+				console.log(err);
+				new Toast().err('组件罢工啦>.<')
+			}
 		};
 		super.run('Modal', objectAssign({}, opt, options));
 	}
@@ -105,6 +109,10 @@ class ActionSheet extends Pop {
 		super();
 		const opt = {
 			itemList: [],
+			fail(err) {
+				console.log(err);
+				new Toast().err('组件罢工啦>.<')
+			}
 		};
 		super.run('ActionSheet', objectAssign({}, opt, options));
 	}
