@@ -1,5 +1,9 @@
+const host = 'https://www.deeduo.top/';
+
 const api = {
-	test: 'https://www.deeduo.top/api/test',
+	test: `${host}api/test`,
+	productTest: `${host}api/product.test/`,
+
 };
 
 export default api;
